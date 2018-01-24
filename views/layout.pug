@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title JoyStick
+    link(rel='stylesheet' href='/css/bulma.css')
+    link(rel='stylesheet' href='/css/styles.css')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+  body
+    nav.navbar.is-black
+      .navbar-brand
+        a.navbar-item(href='/')
+          img(src='/images/logo.png' alt='JoyStick: logo')
+        label.navbar-burger.burger(data-target='menu', for='nav-toggle-state')
+          span
+          span
+          span
+      #menu.navbar-menu
+        .navbar-start
+          a.navbar-item(href='/') Home
+          if user
+            a.navbar-item(href='/articles/publish') Publish Article
+
+        .navbar-end
+          if user
+            a.navbar-item(href='/users/logout') Logout
+          else
+            .navbar-item
+              .field.is-grouped
+                p.control
+                  a.navbar-button(href="/users/login")
+                    span.navbar-button-text Login
+                p.control
+                  a.navbar-button(href="/users/register")
+                    span.navbar-button-text Register
+    .container
+      != messages('message', locals)
+      if errors
+        each error, i in errors
+          div(class="error-msg notification is-danger") #{error.msg}
+      br
+      block content
+      br
+  script(src='/js/jquery.js')
+  script(src='/js/delete.js')

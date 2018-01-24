@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1(class='title')= article.title
+  h5(class='subtitle') Written by #{author}
+  p(class='subtitle is-6 date') Posted on: #{article.date}
+  p= article.content
+  hr
+  if user
+    if user.id ==article.author
+      a.btn.btn-default(href='/articles/edit/'+article._id) Edit
+      span &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      a.btn.btn-danger.delete-article(href='#', data-id=article._id) Delete

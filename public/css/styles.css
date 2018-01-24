@@ -1,0 +1,102 @@
+/* Override Bulma Defaults */
+.error-msg {
+  border-radius: 0;
+  background-color: #D64B4B;
+  margin-top: 10px;
+}
+/* Navbar */
+.navbar-button {
+  width: 160px;
+  height: 40px;
+  font-family: Avenir;
+  color: #FFFFFF;
+  border: none;
+  background-color: #000000;
+  font-size: 16px;
+}
+.navbar-button-text {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+.navbar-button:hover {
+  color: #D3D3D3;
+}
+
+/* Home page styling */
+.articles-container {
+  max-width: 70%;
+  margin-top: 15px;
+  margin: 0 auto;
+}
+.article {
+  width: 100%;
+  border-radius: 0;
+  border: 0.5px solid #D3D3D3;
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.article .article-title {
+  margin-top: 5px;
+  font-family: Avenir;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #505050;
+}
+.article-excerpt {
+  width: 98%;
+  margin-left: 10px;
+}
+.article-continue {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #505050;
+}
+.article-continue:hover {
+  color: #000000;
+}
+.article-title:hover {
+  color: #000000;
+}
+
+/* Registration Form */
+body {
+  font-family: Avenir;
+}
+
+.registration-form-input {
+  width: 350px;
+  height: 30px;
+  border-radius: 0;
+  border: 2px solid #505050;
+  font-family: Avenir;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.registration-form-button {
+  width: 100px;
+  height: 30px;
+  border-radius: 0;
+  border: 2px solid #000000;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Avenir;
+  cursor: pointer;
+}
+
+/* Article Tweaks */
+.date {
+  margin-top: 5px;
+}
+
+/* Article Publisher/Editor */
+.article-input {
+  font-family: Avenir;
+  font-size: 16px;
+  border: 2px solid #000000;
+  border-radius: 0;
+}

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  br
+  h1(class='title') Edit Article
+  br
+  form(method='POST', action='/articles/edit/'+article._id)
+    .field
+      label.label Title:
+      input.input.article-input(name='title', type='text' value=article.title)
+    .field
+      label.label Author:
+      input.input.article-input(name='author', type='text' value=article.author disabled)
+    .field
+      label.label Content:
+      textarea.textarea.article-input(name='content')= article.content
+    .field
+      label.label Excerpt:
+      textarea.textarea.article-input(name='excerpt')= article.excerpt
+    br
+    button.registration-form-button(type='submit') Submit

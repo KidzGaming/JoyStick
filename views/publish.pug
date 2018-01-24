@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1(class='title') Create Article
+  br
+  form(method='POST', action='/articles/publish')
+    .field
+      label.label Title:
+      input.input.article-input(name='title', type='text')
+    .field
+      label.label Content:
+      textarea.textarea.article-input(name='content')
+    .field
+      label.label Excerpt:
+      textarea.textarea.article-input(name='excerpt')
+    br
+    button.registration-form-button(type='submit') Submit

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1(class='title') Log In
+    form.new-form(method='POST', action='/users/login' align='center')
+      .field
+        label.label Username:
+        input.registration-form-input(name='username', type='text')
+      .field
+        label.label Password:
+        input.registration-form-input(name='password', type='password')
+      br
+      button.registration-form-button(type='submit') Submit

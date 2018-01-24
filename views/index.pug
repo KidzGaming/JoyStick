@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1(class='title') #{title}
+  .articles-container
+    each article, i in articles
+      .article
+        a.article-title(href='/articles/'+article._id)= article.title
+        .article-excerpt
+          p= article.excerpt
+        a.article-continue(href='/articles/'+article._id) Continue Reading

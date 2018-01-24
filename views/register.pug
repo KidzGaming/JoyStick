@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  br
+  form(method='POST', action='/users/register' align='center')
+    .field
+      label.label First Name:
+      input.registration-form-input(name='firstname', type='text')
+    .field
+      label.label Last Name:
+      input.registration-form-input(name='lastname', type='text')
+    .field
+      label.label Email:
+      input.registration-form-input(name='email', type='email')
+    .field
+      label.label Username:
+      input.registration-form-input(name='username', type='text')
+    .field
+      label.label Password:
+      input.registration-form-input(name='password', type='password')
+    .field
+      label.label Confirm Password:
+      input.registration-form-input(name='confirmpassword', type='password')
+    br
+    button.registration-form-button(type='submit') Submit
